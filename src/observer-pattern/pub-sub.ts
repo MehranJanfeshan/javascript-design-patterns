@@ -58,7 +58,7 @@ const pubsub = {
   myObject.unsubscribe = function (token) {
     for (const m in topics) {
       if (topics[m]) {
-        for (var i = 0, j = topics[m].length; i < j; i++) {
+        for (let i = 0, j = topics[m].length; i < j; i++) {
           if (topics[m][i].token === token) {
             topics[m].splice(i, 1)
             return token
@@ -76,7 +76,7 @@ const pubsub = {
 // A simple message logger that logs any topics and data received through our
 // subscriber
 const messageLogger = function (topics, data) {
-  console.log('Logging: ' + topics + ': ' + data)
+  console.log(`Logging: ${ topics }: ${ data }`)
 }
 
 // Subscribers listen for topics they have subscribed to and

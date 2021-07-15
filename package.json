@@ -4,8 +4,8 @@
   "description": "Implementation of most common design patterns in javascript",
   "main": "index.js",
   "scripts": {
-    "start:build": "tsc --watch",
-    "start:run": "nodemon dist/index.js",
+    "start:build": "tsc",
+    "start:run": "nodemon dist/mediator/index.js",
     "start": "concurrently npm:start:*"
   },
   "author": "",
